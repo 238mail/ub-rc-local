@@ -1,4 +1,8 @@
-echo "sleep 5s; service sshd restart" > /etc/rc.local
+cat <<EOT >>/etc/rc.local
+#!/bin/bash
+sleep 5s; service sshd restart
+exit 0
+EOT
 
 sudo chmod +x /etc/rc.local
 

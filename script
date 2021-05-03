@@ -1,6 +1,5 @@
 echo "sleep 5s; service sshd restart" > /etc/rc.local
 sudo chmod +x /etc/rc.local
-sudo nano /etc/systemd/system/rc-local.service
 
 cat <<EOT >>/etc/systemd/system/rc-local.service
 [Unit]
